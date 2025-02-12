@@ -11,15 +11,15 @@ namespace JokeApiWebApp.Data
 
         public JokeCRUD(string database)
         {
-            var connectionString = Environment.GetEnvironmentVariable("MONGO_CONNECTION_STRING");
+            //var connectionString = Environment.GetEnvironmentVariable("MONGO_CONNECTION_STRING");
 
-            if (string.IsNullOrEmpty(connectionString))
-            {
-                throw new Exception("MongoDB connection string is missing.");
-            }
+            //if (string.IsNullOrEmpty(connectionString))
+            //{
+            //    throw new Exception("MongoDB connection string is missing.");
+            //}
 
             // Skapa MongoDB-klienten och anslut till databasen
-            var client = new MongoClient(connectionString);
+            var client = new MongoClient("mongodb+srv://muratbuyuksal:12345admin@muratsapi.rn37f.mongodb.net/?retryWrites=true&w=majority");
             db = client.GetDatabase(database);
         }
 
