@@ -19,7 +19,7 @@ namespace JokeApiWebApp.Data
             //}
 
             // Skapa MongoDB-klienten och anslut till databasen
-            var client = new MongoClient("mongodb+srv://muratbuyuksal:12345admin@muratsapi.rn37f.mongodb.net/?retryWrites=true&w=majority");
+            var client = new MongoClient("");
             db = client.GetDatabase(database);
         }
 
